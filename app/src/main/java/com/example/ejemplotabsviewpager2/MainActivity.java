@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         //añado las pestañas que necesite
         tablayout.addTab(tablayout.newTab().setText("Fragmento 1"));
         tablayout.addTab(tablayout.newTab().setText("Fragmento 2"));
+        tablayout.addTab(tablayout.newTab().setText("Fragmento 3"));
+        tablayout.addTab(tablayout.newTab().setText("Fragmento 4"));
 
         //hago que los tabs sean clicables
         tablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

@@ -17,14 +17,22 @@ public class MyFragmentAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         //aqui cargamos los fragment dependiendo de en que posicion se encuentre (posicion del tab)
-        if(position == 1){
-            return new Fragment2(); //si la posicion es la 1(seria el 2 al empezar a contar desde 0) carga el frgment 2
+        switch (position){ //recuerda que la position empieza en 0
+            case 0:
+                return  new Fragment1();
+            case 1:
+                return new Fragment2();
+            case 2:
+                return new Fragment3();
+            case 3:
+                return new Fragment4();
         }
-        return new Fragment1(); //si no, carga el 1 ya que no hay otra opción
+        return new Fragment1(); //retorno el fragment 1 por si fallaran los tabs
+
     }
 
     @Override
     public int getItemCount() {
-        return 2; //indicamos el numero de fragments que tenemos
+        return 4; //indicamos el numero de fragments que tenemos
     }
 }
